@@ -11,10 +11,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script src="./fixed-nav-bar-transition.js"></script>
   <script src="./fade.js"></script>
+  <script src="./preloader.js"></script>
 
 </head>
 
 <body>
+
   <header>
 
   </header>
@@ -101,7 +103,7 @@
               <span class="font-weight-bold">Couleur des yeux:</span> Brun Noisette <br>
               <span class="font-weight-bold">Taille:</span> 169 cm <br>
               <span class="font-weight-bold">Poids:</span> 49kg <br>
-              <span class="font-weight-bold">État civil:</span> Non-marriée <br>
+              <span class="font-weight-bold">État civil:</span> Non-mariée <br>
               <span class="font-weight-bold">Occupation:</span> Joueur profesionnelle d'échecs <br>
               <span class="font-weight-bold">Titres gagnés:</span> Kentucky State Champion (1963-1967) <br>
               <span class="font-weight-bold">Titres gagnés:</span> United States Champion (1967–) <br>
@@ -281,7 +283,44 @@
         </div>
       </div>
     </section>
+<!-- preloader is NOT MY CODE, full creds to ARiyou2000-->
+<!--Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
+<!-- Prevent Scroll -->
+<!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
+<!-- Give your "body" the class of "no-scroll-y" to hide the scroll bar -->
+<body id="page-top" class="no-scroll-y">
 
+  <!-- Start: Preloader -->
+  <section id="preloader-section">
+            <div id="preloader">
+                <div id="ctn-preloader" class="ctn-preloader">
+                    <div class="animation-preloader">
+                        
+                        <!-- Spinner -->
+                        <div class="spinner"></div>
+                        
+                        <!-- Start: Text Loading -->
+                        <div class="txt-loading">
+                            <span data-text-preloader="&#x2655" class="letters-loading">&#x2655</span>
+                            <span data-text-preloader="&#x2656" class="letters-loading">&#x2656</span>
+                            <span data-text-preloader="&#x2657" class="letters-loading">&#x2657</span>
+                            <span data-text-preloader="&#x2658" class="letters-loading">&#x2658</span>
+                            <span data-text-preloader="&#x2659" class="letters-loading">&#x2659</span>
+                        </div>
+                        <!-- End: Text Loading -->
+
+                    </div>
+
+                    <!-- Start: Preloader sides - Model 1 -->
+                    <div class="loader-section section-left"></div>
+                    <div class="loader-section section-right"></div>
+                    <!-- End: Preloader sides - Model 1 -->
+
+                </div>
+            </div>
+        </section>
+  <!-- End: Preloader -->
+  <!-- Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
   </main>
   <footer>
 

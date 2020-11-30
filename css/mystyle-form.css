@@ -35,6 +35,7 @@ body {
   background-image: url("../img/elizabeth-harmon-main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .form-container{
   border-radius: 50px;

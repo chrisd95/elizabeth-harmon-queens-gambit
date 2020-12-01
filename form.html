@@ -49,41 +49,48 @@
     <div class="form-section d-flex justify-content-start align-items-center">
       <div class="form-container text-light ml-5">
         <div class="display-4 text-light ml-5 mt-5 mb-4">Contactez-moi</div>
-        <form method="POST" action="https://www.w3schools.com/action_page.php">
+        <form id="form-contact-me" action="https://www.w3schools.com/action_page.php" method="get">
           <div class="form-row">
             <div class="form-group col-md-10 ml-5">
-              <label for="inputEmail4">Courriel</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Courriel" required>
+              <label for="inputEmail">Courriel</label>
+              <input name="inputEmail" type="email" class="form-control" id="inputEmail" placeholder="Courriel" required>
             </div>
           </div>
           <div class="form-group col-md-10 ml-5 px-0">
             <label for="inputAddress">Addresse</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Rue de...">
+            <input name="inputAddress" type="text" class="form-control" id="inputAddress" placeholder="1234 Rue de...">
           </div>
           <div class="form-group col-md-10 ml-5 px-0">
             <label for="inputAddress2">Addresse 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartement, studio, ou étage...">
+            <input name="inputAddress2" type="text" class="form-control" id="inputAddress2" placeholder="Apartement, studio, ou étage...">
           </div>
           <div class="form-row">
             <div class="form-group col-md-5 ml-5">
               <label for="inputCity">Ville</label>
-              <input type="text" class="form-control" id="inputCity">
+              <input name="inputCity" type="text" class="form-control" id="inputCity">
             </div>
             <div class="form-group col-md-3">
               <label for="inputState">Province</label>
-              <select id="inputState" class="form-control">
+              <select name="inputState" id="inputState" class="form-control">
                 <option selected>Québec</option>
-                <option>...</option>
+                <option>Alberta</option>
+                <option>Colombie-Britannique</option>
+                <option>Manitoba</option>
+                <option>Nouveau Brunswick</option>
+                <option>Terreneuve et Labrador</option>
+                <option>Nouvelle-Écosse</option>
+                <option>Ontario</option>
+                <option>Île-du-Prince-Édouard</option>
               </select>
             </div>
             <div class="form-group col-md-2">
               <label for="inputZip">Code Postal</label>
-              <input type="text" class="form-control" id="inputZip">
+              <input name="inputZip" type="text" class="form-control" id="inputZip">
             </div>
           </div>
           <div class="form-group ml-5">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <input name="gridCheck" class="form-check-input" type="checkbox" id="gridCheck">
               <label class="form-check-label" for="gridCheck">
                 S'inscrire au bulletin d'information
               </label>

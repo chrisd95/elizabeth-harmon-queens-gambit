@@ -23,24 +23,22 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-
   .navbar {
     background: black;
   }
 }
 
-.form-section{
+.form-section {
   background: white;
-  height: 1200px;
+  height: 1100px;
   background-image: url("../img/elizabeth-harmon-main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.form-container{
+.form-container {
   border-radius: 50px;
   background: black;
   width: 45%;
-  height: 80%;
+  height: 55%;
 }
-

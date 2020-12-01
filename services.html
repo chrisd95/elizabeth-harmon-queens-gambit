@@ -1,236 +1,419 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Projet 2, IFT-1005</title>
+    <link rel="stylesheet" href="./css/mystyle-services.css" />
+    <!-- https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./fixed-nav-bar-transition.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<head>
-  <meta charset="utf-8">
-  <title>Projet 2, IFT-1005</title>
-  <link rel="stylesheet" href="./css/mystyle-services.css">
-  <!-- https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="./fixed-nav-bar-transition.js"></script>
+    <script>
+      //https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
+      $(function () {
+        var elizabeth = [];
 
-</head>
+        $.getJSON("elizabeth-harmon.json", function (data) {
+          for (i = 0; i < data.ouvertures_echecs.length; i++) {
+            let ouverture = data.ouvertures_echecs[i].ouverture;
+            let variation = data.ouvertures_echecs[i].variation;
+            position = String(i + 1);
+            document.getElementById("ouverture-echecs-" + position).innerHTML =
+              ouverture + ": " + variation;
+          }
+        });
+      });
+    </script>
+  </head>
 
-<body>
-  <header>
+  <body>
+    <header></header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  </header>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav d-flex justify-content-around">
-        <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#info-section">&#x2655; INFO</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#education-section">&#x2654; ÉDUCATION</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#experience-section">&#x2656; EXPÉRIENCE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#varia-section">&#x2657; VARIA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="form.html">&#x2658; CONTACT</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="services.html">&#x2659; SERVICES</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <main>
-    <div class="form-section d-flex justify-content-end align-items-center">
-      <div class="form-container text-light mr-5">
-        <div class="display-4 text-light ml-5 mt-5 mb-4">Cédulez une séance</div>
-        <form>
-          <div class="form-row">
-            <div class="form-group col-md-5 ml-5">
-              <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-            </div>
-            <div class="form-group col-md-5">
-              <label for="inputPassword4">Password</label>
-              <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-            </div>
-          </div>
-          <div class="form-group col-md-10 ml-5 px-0">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-          </div>
-          <div class="form-group col-md-10 ml-5 px-0">
-            <label for="inputAddress2">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-5 ml-5">
-              <label for="inputCity">Ville</label>
-              <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="form-group col-md-3">
-              <label for="inputState">Province</label>
-              <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Code Postal</label>
-              <input type="text" class="form-control" id="inputZip">
-            </div>
-          </div>
-          <div class="form-group ml-5">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck">
-              <label class="form-check-label" for="gridCheck">
-                S'inscrire au bulletin d'information
-              </label>
-            </div>
-          </div>
-          <div class="form-group ml-5">
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-          </div>
-        </form>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav d-flex justify-content-around">
+          <li class="nav-item">
+            <a
+              class="nav-link text-light font-weight-bold"
+              href="index.html#info-section"
+              >&#x2655; INFO</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light font-weight-bold"
+              href="index.html#education-section"
+              >&#x2654; ÉDUCATION</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light font-weight-bold"
+              href="index.html#experience-section"
+              >&#x2656; EXPÉRIENCE</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-light font-weight-bold"
+              href="index.html#varia-section"
+              >&#x2657; VARIA</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light font-weight-bold" href="form.html"
+              >&#x2658; CONTACT</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light font-weight-bold" href="services.html"
+              >&#x2659; SERVICES</a
+            >
+          </li>
+        </ul>
       </div>
-    </div>
-    <section>
-      <div class="competences-section d-flex justify-content-center flex-column align-items-center">
-        <h1 class="display-3 text-light mt-3">
-          Compétences
-        </h1>
-        <div class="tableau p-3 mt-5">
-          <div class="ligne d-flex justify-content-center">
-            <div class="boite p-3">
-                <div class="display-4 text-light">
-                    Russe
-                  <span class="number-bar display-4 mt-1">
-                    60%
-                  </span>
-                </div>
-                <div class="bar-nofill ">
-                  <div class="bar-fill bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+    </nav>
+    <main>
+      <div class="form-section d-flex justify-content-end align-items-center">
+        <div class="form-container text-light mr-5">
+          <div class="display-4 text-light ml-5 mt-5 mb-4">
+            Cédulez une séance
+          </div>
+          <form action="https://www.w3schools.com/action_page.php" method="get">
+            <div class="form-row">
+              <div class="form-group col-md-5 ml-5">
+                <label for="inputEmail">Courriel</label>
+                <input
+                  name="inputEmail"
+                  type="email"
+                  class="form-control"
+                  id="inputEmail"
+                  placeholder="Courriel"
+                />
+              </div>
+              <div class="form-group col-md-5">
+                <label for="inputCode">Code de promotion</label>
+                <input
+                  name="inputCode"
+                  type="text"
+                  class="form-control"
+                  id="inputCode"
+                  placeholder="Ex: H4535DF"
+                />
+              </div>
             </div>
-            <div class="boite p-3">
-                <div class="display-4 text-light">
-                    Mathematiques
-                  <span class="number-bar display-4 mt-1">
-                    90%
-                  </span>
-                </div>
-                <div class="bar-nofill">
-                  <div class="bar-fill" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="form-group col-md-10 ml-5 px-0">
+              <label for="inputAddress">Address</label>
+              <input
+                name="inputAddress"
+                type="text"
+                class="form-control"
+                id="inputAddress"
+                placeholder="1234 Rue de ..."
+              />
             </div>
-          </div>
-          <div class="ligne d-flex justify-content-center">
-            <div class="boite p-3">
-                <div class="display-4 text-light">
-                    Sciences
-                  <span class="number-bar display-4 mt-1">
-                    85%
-                  </span>
-                </div>
-                <div class="bar-nofill">
-                  <div class="bar-fill" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="form-group col-md-10 ml-5 px-0">
+              <label for="inputAddress2">Address 2</label>
+              <input
+                name="inputAddress2"
+                type="text"
+                class="form-control"
+                id="inputAddress2"
+                placeholder="Apartement, studio, ou étage..."
+              />
             </div>
-            <div class="boite p-3">
-                <div class="display-4 text-light">
-                    Anglais
-                  <span class="number-bar display-4 mt-1">
-                    70%
-                  </span>
-                </div>
-                <div class="bar-nofill">
-                  <div class="bar-fill" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="form-row">
+              <div class="form-group col-md-5 ml-5">
+                <label for="inputCity">Ville</label>
+                <input
+                  name="inputCity"
+                  type="text"
+                  class="form-control"
+                  id="inputCity"
+                />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="inputState">Province</label>
+                <select name="inputState" id="inputState" class="form-control">
+                  <option selected>Québec</option>
+                  <option>Alberta</option>
+                  <option>Colombie-Britannique</option>
+                  <option>Manitoba</option>
+                  <option>Nouveau Brunswick</option>
+                  <option>Terreneuve et Labrador</option>
+                  <option>Nouvelle-Écosse</option>
+                  <option>Ontario</option>
+                  <option>Île-du-Prince-Édouard</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Code Postal</label>
+                <input
+                  name="inputZip"
+                  type="text"
+                  class="form-control"
+                  id="inputZip"
+                />
+              </div>
             </div>
-          </div>
-          <div class="ligne d-flex justify-content-center">
-            <div class="boite p-3">
-                <div class="display-4 text-light">
-                    Échecs
-                  <span class="number-bar display-4 mt-1">
-                    100%
-                  </span>
-                </div>
-                <div class="bar-nofill">
-                  <div class="bar-fill" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="form-group ml-5">
+              <div class="form-check">
+                <input
+                  name="gridCheck"
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck"
+                />
+                <label class="form-check-label" for="gridCheck">
+                  S'inscrire au bulletin d'information
+                </label>
+              </div>
             </div>
-            <div class="boite p-3">
-                <div class="display-4 text-light">
-                    History
-                  <span class="number-bar display-4 mt-1">
-                    75%
-                  </span>
-                </div>
-                <div class="bar-nofill">
-                  <div class="bar-fill" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+            <div class="form-group ml-5">
+              <button type="submit" class="btn btn-primary">Envoyer</button>
             </div>
-          </div>
-        </div>
-        <div class="competences-info p-5 text-light">
-          En plus des échecs, Harmon maintient des compétences en mathématiques, sciences et histoire. En cinq ans, elle parle couramment le russe, ce qui lui permet d'écouter les commérages de personnes qui pensent qu'elle ne peut pas.
-        </div>
-      </div>
-    </section>
-    <!-- Varia -->
-    <section>
-      <div id="varia-section">
-        <div id="varia-section-title"><h1 class="display-4 text-light">Varia: Ouvertures Favories</h1></div>
-        <div class="row chess-game-row">
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game1.gif" alt="game-1">
-              <p class="text-lead-chess-game">Budapest Defense: Adler Variation</p>
-          </div>
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game2.gif" alt="game-2">
-            <p class="text-lead-chess-game">Slav Defense: Modern Variation</p>
-          </div>
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game3.gif" alt="game-3">
-            <p class="text-lead-chess-game">Sicilian Defense: Franco-Sicilian Variation</p>
-          </div>
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img  class="chess-game" src="./img/botez-game4.gif" alt="game-4">
-            <p class="text-lead-chess-game">King's Indian Defense: Normal Variation</p>
-          </div>
-        </div>
-        <div class="row chess-game-row">
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game5.gif" alt="game-5">
-            <p class="text-lead-chess-game">Sicilian Defense: Mengarini Variation</p>
-          </div>
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game6.gif" alt="game-6">
-            <p class="text-lead-chess-game">English Opening: Caro-Kann Defense</p>
-          </div>
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game7.gif" alt="game-7">
-            <p class="text-lead-chess-game">Modern Defense: Geller System</p>
-          </div>
-          <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game8.gif" alt="game-8">
-            <p class="text-lead-chess-game">Scandinavian Defense: Mieses Variation</p>
-          </div>
+          </form>
         </div>
       </div>
-    </section>
-
-
-  </main>
-  <footer>
-
-  </footer>
-</body>
-
+      <section>
+        <div
+          class="competences-section d-flex justify-content-center flex-column align-items-center"
+        >
+          <h1 class="display-3 text-light mt-3">Compétences</h1>
+          <div class="tableau p-3 mt-5">
+            <div class="ligne d-flex justify-content-center">
+              <div class="boite p-3">
+                <div class="display-4 text-light">
+                  Russe
+                  <span class="number-bar display-4 mt-1"> 60% </span>
+                </div>
+                <div class="bar-nofill">
+                  <div
+                    class="bar-fill bg-warning"
+                    role="progressbar"
+                    style="width: 60%"
+                    aria-valuenow="60"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="boite p-3">
+                <div class="display-4 text-light">
+                  Maths
+                  <span class="number-bar display-4 mt-1"> 90% </span>
+                </div>
+                <div class="bar-nofill">
+                  <div
+                    class="bar-fill"
+                    role="progressbar"
+                    style="width: 90%"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="ligne d-flex justify-content-center">
+              <div class="boite p-3">
+                <div class="display-4 text-light">
+                  Sciences
+                  <span class="number-bar display-4 mt-1"> 85% </span>
+                </div>
+                <div class="bar-nofill">
+                  <div
+                    class="bar-fill"
+                    role="progressbar"
+                    style="width: 85%"
+                    aria-valuenow="85"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="boite p-3">
+                <div class="display-4 text-light">
+                  Anglais
+                  <span class="number-bar display-4 mt-1"> 70% </span>
+                </div>
+                <div class="bar-nofill">
+                  <div
+                    class="bar-fill"
+                    role="progressbar"
+                    style="width: 70%"
+                    aria-valuenow="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="ligne d-flex justify-content-center">
+              <div class="boite p-3">
+                <div class="display-4 text-light">
+                  Échecs
+                  <span class="number-bar display-4 mt-1"> 100% </span>
+                </div>
+                <div class="bar-nofill">
+                  <div
+                    class="bar-fill"
+                    role="progressbar"
+                    style="width: 100%"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+              <div class="boite p-3">
+                <div class="display-4 text-light">
+                  History
+                  <span class="number-bar display-4 mt-1"> 75% </span>
+                </div>
+                <div class="bar-nofill">
+                  <div
+                    class="bar-fill"
+                    role="progressbar"
+                    style="width: 75%"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="competences-info p-5 text-light">
+            En plus des échecs, Harmon maintient des compétences en
+            mathématiques, sciences et histoire. En cinq ans, elle parle
+            couramment le russe, ce qui lui permet d'écouter les commérages de
+            personnes qui pensent qu'elle ne peut pas.
+          </div>
+        </div>
+      </section>
+      <!-- Varia -->
+      <section>
+        <div id="varia-section">
+          <div id="varia-section-title">
+            <h1 id="section-title-4" class="display-2 text-light ml-5 mb-5">
+              Spécialités
+            </h1>
+          </div>
+          <div class="row chess-game-row">
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game1.gif"
+                alt="game-1"
+              />
+              <p id="ouverture-echecs-1" class="text-lead-chess-game"></p>
+            </div>
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game2.gif"
+                alt="game-2"
+              />
+              <p id="ouverture-echecs-2" class="text-lead-chess-game"></p>
+            </div>
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game3.gif"
+                alt="game-3"
+              />
+              <p id="ouverture-echecs-3" class="text-lead-chess-game"></p>
+            </div>
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game4.gif"
+                alt="game-4"
+              />
+              <p id="ouverture-echecs-4" class="text-lead-chess-game"></p>
+            </div>
+          </div>
+          <div class="row chess-game-row">
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game5.gif"
+                alt="game-5"
+              />
+              <p id="ouverture-echecs-5" class="text-lead-chess-game"></p>
+            </div>
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game6.gif"
+                alt="game-6"
+              />
+              <p id="ouverture-echecs-6" class="text-lead-chess-game"></p>
+            </div>
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game7.gif"
+                alt="game-7"
+              />
+              <p id="ouverture-echecs-7" class="text-lead-chess-game"></p>
+            </div>
+            <div
+              class="col d-flex justify-content-around align-items-center flex-column"
+            >
+              <img
+                class="chess-game"
+                src="./img/botez-game8.gif"
+                alt="game-8"
+              />
+              <p id="ouverture-echecs-8" class="text-lead-chess-game"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
 </html>

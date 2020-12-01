@@ -23,83 +23,79 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-
   .navbar {
     background: black;
   }
 }
 
-.form-section{
+.form-section {
   background: white;
   height: 1200px;
   background-image: url("../img/elizabeth-harmon-study-crop-flipped.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.form-container{
+.form-container {
   border-radius: 50px;
   background: black;
   width: 50%;
-  height: 80%;
+  height: 55%;
 }
 
-#varia-section{
+#varia-section {
   background: black;
-  height: 800px;
+  height: 1000px;
 }
 
-
-.chess-game-row{
-height: 40%;
-width: 100%;
+.chess-game-row {
+  height: 40%;
+  width: 100%;
 }
-.chess-game{
+.chess-game {
   width: 70%;
   border-radius: 10px;
 }
 
-.text-lead-chess-game{
+.text-lead-chess-game {
   font-size: 1.1vw;
   font-weight: bolder;
   color: white;
 }
 
-
-.competences-section{
+.competences-section {
   background-color: black;
   width: 100%;
   height: 800px;
-  }
-  
-.tableau{
+}
+
+.tableau {
   height: 500px;
   width: 85%;
 }
-.ligne{
+.ligne {
   width: 100%;
   height: 120px;
 }
-.boite{
+.boite {
   width: 40%;
   position: relative;
 }
-.number-bar{
-  font-size: 16px;
+.number-bar {
+  font-size: 3rem;
   position: absolute;
-  left: 80%;
+  left: 75%;
 }
-.bar-nofill{
+.bar-nofill {
   position: relative;
-  background-color:#6c757d;
+  background-color: #6c757d;
 }
-.bar-fill{
+.bar-fill {
   height: 5px;
-  background-color:#28a745;
+  background-color: #28a745;
 }
-.competences-info{
+.competences-info {
   font-size: 1.5rem;
-   line-height: 1.1;
-   width: 900px;
-   height: 900px;
+  line-height: 1.1;
+  width: 900px;
+  height: 900px;
 }
-    

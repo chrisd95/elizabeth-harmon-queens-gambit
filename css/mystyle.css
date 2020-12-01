@@ -95,7 +95,7 @@ body {
 #education-section {
   background: black;
   height: 795px;
-  width: 100%;
+  width: 101%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -388,15 +388,15 @@ https://codepen.io/ARiyou2000/pen/YzyxMOQ FULL CREDS TO ARiyou2000 START */
 
 /* Curtain effect */
 .loaded .loader-section.section-left {
-  -webkit-transform: translateX(-101%);
-          transform: translateX(-101%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
   transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
 }
 
 .loaded .loader-section.section-right {
-  -webkit-transform: translateX(101%);
-          transform: translateX(101%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   -webkit-transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
   transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2.000);
 }

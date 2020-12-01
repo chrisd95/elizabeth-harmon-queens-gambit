@@ -9,9 +9,78 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="./fixed-nav-bar-transition.js"></script>
   <script src="./fade.js"></script>
   <script src="./preloader.js"></script>
+  <script>
+    //https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
+    $(function() {
+
+
+      var elizabeth = [];
+
+      $.getJSON('elizabeth-harmon.json', function(data) {
+        for(i=0; i<data.titres_section_court.length;i++){
+          let section_titre_court = data.titres_section_court[i];
+          let position = String(i + 1);
+          document.getElementById("section-title-short-" + position).innerHTML = section_titre_court.toUpperCase()
+        }
+        document.getElementById("nom_complet").innerHTML = data.titre_html.nom_complet;
+        document.getElementById("emission").innerHTML = data.titre_html.emission;
+
+        for(i=0; i< data.information_personnelle.length;i++){
+          let categorie = data.information_personnelle[i].info_categorie;
+          let information = data.information_personnelle[i].info_valeur;
+          console.log(categorie)
+          let position = String(i+1)
+          document.getElementById("information-category-" + position).innerHTML = categorie+ ": ";
+          document.getElementById("information-value-" + position).innerHTML = information;
+        }
+        for(i=0;i<data.titres_section.length;i++){
+          let section_titre = data.titres_section[i]
+          let position = String(i + 1);
+          document.getElementById("section-title-" + position).innerHTML = section_titre;
+        }
+
+        
+        for(i=0; i< data.age_pictures.length;i++){
+          let age = data.age_pictures[i];
+          position = String(i+1)
+          document.getElementById("age-pictures-" + position).innerHTML = age;
+        }
+        for (i = 0; i < data.education.length; i++) {
+          let edu_saison = data.education[i].saison;
+          let edu_annee = data.education[i].annee;
+          let edu_titre = data.education[i].titre;
+          let edu_desc = data.education[i].description;
+          let position = String(i + 1);
+
+          document.getElementById("education-season-" + position).innerHTML = edu_saison;
+          document.getElementById("education-year-" + position).innerHTML = edu_annee;
+          document.getElementById("education-title-" + position).innerHTML = edu_titre;
+          document.getElementById("education-description-" + position).innerHTML = edu_desc;
+        };
+        for (i = 0; i < data.experience.length; i++) {
+          let exp_titre = data.experience[i].titre;
+          let exp_desc = data.experience[i].description;
+          position = String(i + 1);
+          document.getElementById("experience-title-" + position).innerHTML = exp_titre;
+          document.getElementById("experience-description-" + position).innerHTML = exp_desc;
+        };
+
+        for(i = 0 ; i < data.ouvertures_echecs.length;i++){
+          let ouverture = data.ouvertures_echecs[i].ouverture;
+          let variation = data.ouvertures_echecs[i].variation;
+          console.log(ouverture)
+          console.log(variation)
+          position = String(i + 1);
+          document.getElementById("ouverture-echecs-" + position).innerHTML = ouverture + ":<br>" + variation;
+        }
+      });
+
+    });
+  </script>
 
 </head>
 
@@ -28,30 +97,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav d-flex justify-content-around">
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="#info-section">&#x2655 INFO</a>
+          <a id="section-title-short-1" class="nav-link text-light font-weight-bold" href="#info-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="#education-section">&#x2654 ÉDUCATION</a>
+          <a id="section-title-short-2"  class="nav-link text-light font-weight-bold" href="#education-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="#experience-section">&#x2656 EXPÉRIENCE</a>
+          <a id="section-title-short-3" class="nav-link text-light font-weight-bold" href="#experience-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="#varia-section">&#x2657 VARIA</a>
+          <a id="section-title-short-4"  class="nav-link text-light font-weight-bold" href="#varia-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="form.html">&#x2658 CONTACT</a>
+          <a id="section-title-short-5"  class="nav-link text-light font-weight-bold" href="form.html"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="services.html">&#x2659 SERVICES</a>
+          <a id="section-title-short-6"  class="nav-link text-light font-weight-bold" href="services.html"></a>
         </li>
       </ul>
     </div>
   </nav>
   <main>
     <div class="jumbotron mb-0">
-      <h1 class="display-8 text-center font-weight-bold text-light">Elizabeth Harmon</h1>
-      <p class="lead text-center font-weight-bold text-light">The Queen's Gambit</p>
+      <h1 id="nom_complet" class="display-8 text-center font-weight-bold text-light"></h1>
+      <p id="emission" class="lead text-center font-weight-bold text-light"></p>
     </div>
     <!-- Informations personnelles -->
     <section>
@@ -62,51 +131,49 @@
               <div class="carousel-item active">
                 <div class="d-block w-100">
                   <div class="profile-image-container young">
-                    <div class="display-4 text-light"> 9 ans</div>
+                    <div id="age-pictures-1" class="display-4 text-light"></div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="d-block w-100">
                   <div class="profile-image-container teen">
-                    <div class="display-4 text-light"> 13 ans</div>
+                    <div id="age-pictures-2" class="display-4 text-light"></div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="d-block w-100">
                   <div class="profile-image-container adult">
-                    <div class="display-4 text-light"> 20 ans</div>
+                    <div id="age-pictures-3" class="display-4 text-light"></div>
                   </div>
                 </div>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <h1 class="display-4 title">Informations personnelles</h1>
+              <h1 id="section-title-1" class="display-4 title"></h1>
             </div>
             <div class="card-body information">
-              <span class="font-weight-bold">Age:</span> 20 <br>
-              <span class="font-weight-bold">Nationalité:</span> Américaine <br>
-              <span class="font-weight-bold">Genre:</span> Femme <br>
-              <span class="font-weight-bold">Couleur des yeux:</span> Brun Noisette <br>
-              <span class="font-weight-bold">Taille:</span> 169 cm <br>
-              <span class="font-weight-bold">Poids:</span> 49kg <br>
-              <span class="font-weight-bold">État civil:</span> Non-mariée <br>
-              <span class="font-weight-bold">Occupation:</span> Joueur profesionnelle d'échecs <br>
-              <span class="font-weight-bold">Titres gagnés:</span> Kentucky State Champion (1963-1967) <br>
-              <span class="font-weight-bold">Titres gagnés:</span> United States Champion (1967–) <br>
+              <span id="information-category-1" class="font-weight-bold"></span> <span id="information-value-1"></span> <br>
+              <span id="information-category-2" class="font-weight-bold"></span> <span id="information-value-2"></span> <br>
+              <span id="information-category-3" class="font-weight-bold"></span> <span id="information-value-3"></span> <br>
+              <span id="information-category-4" class="font-weight-bold"></span><span id="information-value-4"></span><br>
+              <span id="information-category-5" class="font-weight-bold"></span> <span id="information-value-5"></span><br>
+              <span id="information-category-6" class="font-weight-bold"></span> <span id="information-value-6"></span><br>
+              <span id="information-category-7" class="font-weight-bold"></span> <span id="information-value-7"></span><br>
+              <span id="information-category-8" class="font-weight-bold"></span><span id="information-value-8"></span><br>
+              <span id="information-category-9" class="font-weight-bold"></span> <span id="information-value-9"></span><br>
+              <span id="information-category-10" class="font-weight-bold"></span> <span id="information-value-10"></span><br>
             </div>
           </div>
         </div>
@@ -117,86 +184,74 @@
       <div id="education-section" class="row">
         <div class="container">
           <div class="main-timeline text-light">
-            <!-- start experience section-->
-            <h1 class="display-4">Expérience</h1>
+            <h1 id="section-title-2" class="display-4"></h1>
             <div class="timeline">
               <div class="icon"></div>
               <div class="date-content">
                 <div class="date-outer">
                   <span class="date">
-                    <span class="month text-dark">Été</span>
-                    <span class="year">1957</span>
+                    <span id="education-season-1" class="month text-dark"></span>
+                    <span id="education-year-1" class="year"></span>
                   </span>
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 class="title">Accident de la route</h5>
-                <p class="description">
-                  Après la mort de sa mère, Alice Harmon, meurt dans un accident de la route. Son père étant inconnu, Harmon est envoyée à la Maison Methuen, un orphelinat chrétien exclusif au filles, le 25 juillet, 1957.
+                <h5 id="education-title-1" class="title"></h5>
+                <p id="education-description-1" class="description">
                 </p>
               </div>
             </div>
-            <!-- end experience section-->
 
-            <!-- start experience section-->
             <div class="timeline">
               <div class="icon"></div>
               <div class="date-content">
                 <div class="date-outer">
                   <span class="date">
-                    <span class="month text-dark">Été</span>
-                    <span class="year">1963</span>
+                    <span id="education-season-2" class="month text-dark"></span>
+                    <span id="education-year-2" class="year"></span>
                   </span>
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 class="title">Adoption</h5>
-                <p class="description">
-                  Harmon est adoptée en 1963 par la famille Wheatley.               
+                <h5 id="education-title-2" class="title"></h5>
+                <p id="education-description-2" class="description">
                 </p>
               </div>
             </div>
-            <!-- end experience section-->
 
-            <!-- start experience section-->
             <div class="timeline">
               <div class="icon"></div>
               <div class="date-content">
                 <div class="date-outer">
                   <span class="date">
-                    <span class="month text-dark">Hiver</span>
-                    <span class="year">1966</span>
+                    <span id="education-season-3" class="month text-dark"></span>
+                    <span id="education-year-3" class="year"></span>
                   </span>
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 class="title">US Co-Championne</h5>
-                <p class="description">
-                  En 1966, Elizabeth Harmon participe au tournois d'échecs US Championship. Dans ce tournois elle perds contre Benny et est considéré comme US Co-Championne.
+                <h5 id="education-title-3" class="title"></h5>
+                <p id="education-description-3" class="description">
                 </p>
               </div>
             </div>
-            <!-- end experience section-->
 
-            <!-- start experience section-->
             <div class="timeline">
               <div class="icon"></div>
               <div class="date-content">
                 <div class="date-outer">
                   <span class="date">
-                    <span class="month text-dark">Automne</span>
-                    <span class="year">1967</span>
+                    <span id="education-season-4" class="month text-dark"></span>
+                    <span id="education-year-4" class="year"></span>
                   </span>
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 class="title">Ohio US Champion</h5>
-                <p class="description">
-                  En 1967, Harmon identifie ses faiblesses durant le tournois d'Ohio US Champion. Elle défait Benny au finaux et ils décident de préparer pour son début de carrière internationale à New York.
+                <h5 id="education-title-4" class="title"></h5>
+                <p id="education-description-4" class="description">
                 </p>
               </div>
             </div>
-            <!-- end experience section-->
 
           </div>
         </div>
@@ -205,122 +260,129 @@
     <!-- Expérience -->
     <section>
       <div id="experience-section">
-        <h1 class="experience-section-title mt-5 ml-5"> Éducation <hr/></h1>
+        <h1 id="section-title-3" class="experience-section-title mt-5 ml-5"></h1>
         <div class="row mt-5">
-          <div class="col lead ml-5 mr-5">
-            <h1 class="display4"> Early Beginnings</h1>
-            It is in the basement where her introduction to chess began with witnessing the orphanage's custodian, Mr. Shaibel, playing alone, whereby she became fascinated with the checkered pattern of the eight-by-eight grid.
+          <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
+            <h1 id="experience-title-1" class="display4"></h1>
+            <span id="experience-description-1"></span>
           </div>
-          <div class="col">
+          <div class="col justify-content-start align-items-center">
             <img src="./img/elizabeth-harmon-shaibel.jpg" alt="">
           </div>
         </div>
+
         <div class="row mt-5">
           <div class="col d-flex justify-content-end align-items-center mr-5">
             <img src="./img/elizabeth-harmon-levy.jpg" alt="">
           </div>
-          <div class="col">
-            <h1 class="display4"> Subsequent Success</h1>
-            Thanks to Jolene's intervention, Harmon bests all twelve chess players with the King's Pawn opening in a little over eighty minutes, including against the top player Charles Levy; feats which she brags to Mr. Shaibel about over chocolates.          </div>
+          <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
+            <h1 id="experience-title-2" class="display4"></h1>
+            <span id="experience-description-2"> </span>
+          </div>
         </div>
         <div class="row mt-5">
-          <div class="col lead ml-5 mr-5">
-            <h1 class="display4"> US Championship</h1>
-            In 1967, Harmon identifies further weaknesses in her play during the US Championship in Ohio. She wins against Benny, and they decide to prepare for her international career together in New York.          </div>
-          <div class="col">
+          <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
+            <h1 id="experience-title-3" class="display4"></h1>
+            <span id="experience-description-3"> </span>
+          </div>
+          <div class="col justify-content-start align-items-center">
             <img src="./img/elizabeth-harmon-benny.jpg" alt="">
           </div>
         </div>
         <div class="row mt-5">
           <div class="col d-flex justify-content-end align-items-center mr-5">
-            <img src="./img/elizabeth-harmon-shaibel.jpg" alt="">
+            <img src="./img/elizabeth-harmon-borgov.jpg" alt="">
           </div>
-          <div class="col">
-            <h1 class="display4"> Moscow Invitational</h1>
-            For the final game of the tournament, US Champion Elizabeth Harmon plays against World Champion and USSR Grandmaster Vasily Borgov in the 1968 Moscow Invitational Chess Tournament. It is the climax of the Netflix series, The Queen's Gambit.
+          <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
+            <h1 id="experience-title-4" class="display4"></h1>
+            <span id="experience-description-4"> </span>
           </div>
         </div>
+            </div>
     </section>
     <!-- Varia -->
     <section>
       <div id="varia-section">
-        <div id="varia-section-title"><h1 class="display-4 text-light">Varia: Ouvertures Favories</h1></div>
+        <div id="varia-section-title">
+          <h1 id="section-title-4" class="display-4 text-light"></h1>
+        </div>
         <div class="row chess-game-row">
           <div class="col d-flex justify-content-around align-items-center flex-column">
             <img class="chess-game" src="./img/botez-game1.gif" alt="game-1">
-              <p class="text-lead-chess-game">Budapest Defense: Adler Variation</p>
+            <p id="ouverture-echecs-1" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
             <img class="chess-game" src="./img/botez-game2.gif" alt="game-2">
-            <p class="text-lead-chess-game">Slav Defense: Modern Variation</p>
+            <p id="ouverture-echecs-2"  class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
             <img class="chess-game" src="./img/botez-game3.gif" alt="game-3">
-            <p class="text-lead-chess-game">Sicilian Defense: Franco-Sicilian Variation</p>
+            <p id="ouverture-echecs-3"  class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img  class="chess-game" src="./img/botez-game4.gif" alt="game-4">
-            <p class="text-lead-chess-game">King's Indian Defense: Normal Variation</p>
+            <img class="chess-game" src="./img/botez-game4.gif" alt="game-4">
+            <p id="ouverture-echecs-4"  class="text-lead-chess-game"></p>
           </div>
         </div>
         <div class="row chess-game-row">
           <div class="col d-flex justify-content-around align-items-center flex-column">
             <img class="chess-game" src="./img/botez-game5.gif" alt="game-5">
-            <p class="text-lead-chess-game">Sicilian Defense: Mengarini Variation</p>
+            <p  id="ouverture-echecs-5" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
             <img class="chess-game" src="./img/botez-game6.gif" alt="game-6">
-            <p class="text-lead-chess-game">English Opening: Caro-Kann Defense</p>
+            <p   id="ouverture-echecs-6" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
             <img class="chess-game" src="./img/botez-game7.gif" alt="game-7">
-            <p class="text-lead-chess-game">Modern Defense: Geller System</p>
+            <p  id="ouverture-echecs-7" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
             <img class="chess-game" src="./img/botez-game8.gif" alt="game-8">
-            <p class="text-lead-chess-game">Scandinavian Defense: Mieses Variation</p>
+            <p  id="ouverture-echecs-8" class="text-lead-chess-game"></p>
           </div>
         </div>
       </div>
     </section>
-<!-- preloader is NOT MY CODE, full creds to ARiyou2000-->
-<!--Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
-<!-- Prevent Scroll -->
-<!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
-<!-- Give your "body" the class of "no-scroll-y" to hide the scroll bar -->
-<body id="page-top" class="no-scroll-y">
+    <!-- preloader is NOT MY CODE, full creds to ARiyou2000-->
+    <!--Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
+    <!-- Prevent Scroll -->
+    <!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
+    <!-- Give your "body" the class of "no-scroll-y" to hide the scroll bar -->
 
-  <!-- Start: Preloader -->
-  <section id="preloader-section">
-            <div id="preloader">
-                <div id="ctn-preloader" class="ctn-preloader">
-                    <div class="animation-preloader">
-                        
-                        <!-- Spinner -->
-                        <div class="spinner"></div>
-                        
-                        <!-- Start: Text Loading -->
-                        <div class="txt-loading">
-                            <span data-text-preloader="&#x2655" class="letters-loading">&#x2655</span>
-                            <span data-text-preloader="&#x2656" class="letters-loading">&#x2656</span>
-                            <span data-text-preloader="&#x2657" class="letters-loading">&#x2657</span>
-                            <span data-text-preloader="&#x2658" class="letters-loading">&#x2658</span>
-                            <span data-text-preloader="&#x2659" class="letters-loading">&#x2659</span>
-                        </div>
-                        <!-- End: Text Loading -->
+    <body id="page-top" class="no-scroll-y">
 
-                    </div>
+      <!-- Start: Preloader -->
+      <section id="preloader-section">
+        <div id="preloader">
+          <div id="ctn-preloader" class="ctn-preloader">
+            <div class="animation-preloader">
 
-                    <!-- Start: Preloader sides - Model 1 -->
-                    <div class="loader-section section-left"></div>
-                    <div class="loader-section section-right"></div>
-                    <!-- End: Preloader sides - Model 1 -->
+              <!-- Spinner -->
+              <div class="spinner"></div>
 
-                </div>
+              <!-- Start: Text Loading -->
+              <div class="txt-loading">
+                <span data-text-preloader="&#x2655;" class="letters-loading">&#x2655;</span>
+                <span data-text-preloader="&#x2656;" class="letters-loading">&#x2656;</span>
+                <span data-text-preloader="&#x2657;" class="letters-loading">&#x2657;</span>
+                <span data-text-preloader="&#x2658;" class="letters-loading">&#x2658;</span>
+                <span data-text-preloader="&#x2659;" class="letters-loading">&#x2659;</span>
+              </div>
+              <!-- End: Text Loading -->
+
             </div>
-        </section>
-  <!-- End: Preloader -->
-  <!-- Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
+
+            <!-- Start: Preloader sides - Model 1 -->
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+            <!-- End: Preloader sides - Model 1 -->
+
+          </div>
+        </div>
+      </section>
+      <!-- End: Preloader -->
+      <!-- Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
   </main>
   <footer>
 

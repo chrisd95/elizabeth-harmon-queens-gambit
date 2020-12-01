@@ -142,31 +142,30 @@ body {
   }
 }
 
-
-
 #experience-section{
-  height: 1000px;
+  height: 1200px;
   width: 100%;
   background:white;
 }
 
 #experience-section .row{
-  height:17%;
+  height:18%;
   /* background: blue; */
 }
 
 #experience-section img{
-  width:40%;
+  width: 400px;
   border-radius: 20px;
 }
 #varia-section{
   background: black;
-  height: 800px;
+  height: 1000px;
+  overflow: hidden;
 }
 
 
 .chess-game-row{
-height: 40%;
+height: 45%;
 width: 100%;
 }
 .chess-game{
@@ -182,6 +181,7 @@ width: 100%;
 
 
 .experience-section-title{
+  height: 5%;
   font-size: 3rem;
   line-height: 1.08349;
   font-weight: 600;

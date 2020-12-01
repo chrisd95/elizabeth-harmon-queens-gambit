@@ -154,12 +154,12 @@ body {
 }
 
 #experience-section img{
-  width: 400px;
+  width: 40%;
   border-radius: 20px;
 }
 #varia-section{
   background: black;
-  height: 1000px;
+  height: 800px;
   overflow: hidden;
 }
 

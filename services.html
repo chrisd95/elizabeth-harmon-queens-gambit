@@ -69,7 +69,7 @@
   </nav>
   <main>
     <div class="form-section d-flex justify-content-end align-items-center">
-      <div class="form-container text-light mr-5">
+      <div id="schedule-form" class="form-container text-light mr-5">
         <div class="display-4 text-light ml-5 mt-5 mb-4">
           Cédulez une séance
         </div>
@@ -250,7 +250,11 @@
       </div>
     </section>
   </main>
-  <footer></footer>
+  <footer>
+    <script>
+      $("#schedule-form").fadeTo(2000,1);
+    </script>
+  </footer>
 </body>
 
 </html>

@@ -28,6 +28,9 @@ body {
   }
 }
 
+#formcontainer{
+  opacity: 0;
+}
 .form-section {
   background: white;
   height: 1100px;

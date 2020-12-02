@@ -27,6 +27,9 @@ body {
     background: black;
   }
 }
+#schedule-form{
+  opacity: 0;
+}
 
 .form-section {
   background: white;

@@ -21,7 +21,7 @@ body {
 }
 
 .jumbotron {
-  height: 950px;
+  height: 100vh;
   background-image: url("https://i.imgur.com/RxFiJvM.jpg");
   background-size: cover;
   background-position: center;

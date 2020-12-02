@@ -86,9 +86,11 @@ body {
 }
 
 .number-bar {
-  font-size: 3rem;
   position: absolute;
   left: 75%;
+}
+.text-rem{
+  font-size: 2rem;
 }
 
 .bar-nofill {

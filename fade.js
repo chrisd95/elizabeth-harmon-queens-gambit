@@ -136,7 +136,7 @@ window.addEventListener("scroll", () => {
     $("#ouverture-echecs-4").fadeTo("slow",1);
 
   }
-  if(currentScroll >= 3400){
+  if(currentScroll >= 3425){
     $("#ouverture-echecs-gif-5").fadeTo("slow",1);
     $("#ouverture-echecs-5").fadeTo("slow",1);
 
@@ -146,12 +146,12 @@ window.addEventListener("scroll", () => {
     $("#ouverture-echecs-6").fadeTo("slow",1);
 
   }
-  if(currentScroll >= 3500){
+  if(currentScroll >= 3475){
     $("#ouverture-echecs-gif-7").fadeTo("slow",1);
     $("#ouverture-echecs-7").fadeTo("slow",1);
 
   }
-  if(currentScroll >= 3550){
+  if(currentScroll >= 3500){
     $("#ouverture-echecs-gif-8").fadeTo("slow",1);
     $("#ouverture-echecs-8").fadeTo("slow",1);
 

@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica","Arial", sans-serif;
 }
 
 .navbar {
@@ -43,12 +42,6 @@ body {
   overflow: hidden;
   width: 100%;
 }
-#carousel-fade{
-  opacity:0;
-}
-#info-fade{
-  opacity:0;
-}
 .profile-image-container {
   width: 25vw;
   height: 40vw;
@@ -59,15 +52,12 @@ body {
   background-position-x: -0px;
   background-position-y: 0px;
 }
-
 .young {
   background-image: url("https://i.ibb.co/KhfSXyX/elizabeth-harmon-toddler.jpg");
 }
-
 .teen {
   background-image: url("https://i.ibb.co/f9C4G40/elizabeth-harmon-teen.jpg");
 }
-
 .adult {
   background-position-x: -20px;
   background-image: url("https://i.ibb.co/n1PhCFp/elizabeth-harmon-adult.jpg");
@@ -95,6 +85,10 @@ body {
   background: black;
   height: 795px;
   width: 101%;
+}
+
+#carousel-fade, #info-fade{
+  opacity:0;
 }
 
 #section-title-2, #section-title-3, #section-title-4{
@@ -178,7 +172,6 @@ body {
 
 #experience-section .row {
   height: 18%;
-  /* background: blue; */
 }
 
 #experience-section img {
@@ -208,6 +201,7 @@ body {
   color: white;
 }
 
+/* apple font from url (apple.ca) */
 .experience-section-title {
   height: 5%;
   font-size: 3rem;
@@ -217,25 +211,8 @@ body {
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-/* Not my style sheet, used from:
-https://www.selbekk.io/blog/2019/08/how-to-fade-in-content-as-it-scrolls-into-view/ Start */
-.fade-in-section {
-  opacity: 0;
-  transform: translateY(20vh);
-  visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
-  will-change: opacity, visibility;
-}
 
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
-}
-
-/* Not my style sheet, used from:
-https://www.selbekk.io/blog/2019/08/how-to-fade-in-content-as-it-scrolls-into-view/ End */
-/* Not my script from :
+/* THIS IS THE PRELOADER CSS, THIS IS NOT MINE, CODE WAS ADAPTED FROM:
 https://codepen.io/ARiyou2000/pen/YzyxMOQ FULL CREDS TO ARiyou2000 START */
 /* Load Settings */
 .no-scroll-y {
@@ -510,8 +487,11 @@ https://codepen.io/ARiyou2000/pen/YzyxMOQ FULL CREDS TO ARiyou2000 START */
   }
 }
 
-/* Copy-right by ARiyou2000 in May2020*/
-/* This code is not mine it is taken from:
+/* FULL CREDS TO ARiyou2000 FOR THE PRELOADER HTML AND CSS*/
+
+
+
+/* (START) TRANSPARENT NAVBAR TUTORIAL CODE, NOT MINE:
 https://bootstrapious.com/p/transparent-navbar (START)*/
 .navbar.active {
   background: black;
@@ -522,14 +502,14 @@ https://bootstrapious.com/p/transparent-navbar (START)*/
   color: #555;
 }
 
-/* This code is not mine it is taken from:
+/* (END) TRANSPARENT NAVBAR TUTORIAL CODE, NOT MINE:
 https://bootstrapious.com/p/transparent-navbar (END)*/
-/* NOT MY CSS:
-SOURCE: https://www.bootdey.com/snippets/view/bs4-my-experience-timeline#html START */
-body {
-  background-color: #f7f7f7;
-  margin-top: 20px;
-}
+
+
+
+
+/*(START) TIMELINE TUTORIAL:
+ https://www.bootdey.com/snippets/view/bs4-my-experience-timeline#html (START) */
 
 .main-timeline {
   position: relative
@@ -795,5 +775,5 @@ body {
   }
 }
 
-/* NOT MY CSS:
-SOURCE: https://www.bootdey.com/snippets/view/bs4-my-experience-timeline#html END */
+/*(END) TIMELINE TUTORIAL:
+ https://www.bootdey.com/snippets/view/bs4-my-experience-timeline#html (END) */

@@ -24,9 +24,9 @@
 <!-- Give your "body" the class of "no-scroll-y" to hide the scroll bar -->
 
 <body id="page-top" class="no-scroll-y">
-
+  <header>
   <!-- Start: Preloader -->
-  <section id="preloader-section">
+  <div id="preloader-section">
     <div id="preloader">
       <div id="ctn-preloader" class="ctn-preloader">
         <div class="animation-preloader">
@@ -53,8 +53,9 @@
 
       </div>
     </div>
-  </section>
-  <!-- End: Preloader -->
+    </div>
+  </header>
+    <!-- End: Preloader -->
   <!-- Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
 
@@ -87,11 +88,12 @@
   </nav>
   <main>
     <div class="jumbotron mb-0">
-      <h1 id="nom_complet" class="display-8 text-center font-weight-bold text-light">#</h1>
+      <span id="nom_complet" class="display-4 text-center font-weight-bold text-light">#</span>
       <p id="emission" class="lead text-center font-weight-bold text-light"></p>
     </div>
     <!-- Informations personnelles -->
     <section>
+      <h2 class="invisible">Informations personnelles</h2>
       <div id="info-section" class="row">
         <div id="carousel-fade" class="col d-flex justify-content-around align-items-center">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -129,7 +131,7 @@
         <div id="info-fade" class="col">
           <div class="card">
             <div class="card-body">
-              <h1 id="section-title-1" class="display-4 title">#</h1>
+              <span id="section-title-1" class="display-4 title">#</span>
             </div>
             <div class="card-body information">
               <span id="information-category-1" class="font-weight-bold"></span> <span id="information-value-1"></span> <br>
@@ -149,10 +151,11 @@
     </section>
     <!-- Education   -->
     <section>
+      <h2 class="invisible">Éducation</h2>
       <div id="education-section" class="row">
-        <div class="container">
+        <div class="container mt-1">
           <div class="main-timeline text-light">
-            <h1 id="section-title-2" class="display-4">#</h1>
+            <span id="section-title-2" class="display-4">#</span>
             <div class="timeline">
               <div class="icon"></div>
               <div class="date-content">
@@ -227,11 +230,12 @@
     </section>
     <!-- Expérience -->
     <section>
-      <div id="experience-section">
-        <h1 id="section-title-3" class="experience-section-title mt-5 ml-5">#</h1>
+      <h2 class="invisible">Expérience</h2>
+      <div id="experience-section" class="mt-1">
+        <span id="section-title-3" class="experience-section-title mt-5 ml-5">#</span>
         <div class="row mt-5">
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-1" class="display4">#</h1>
+            <span id="experience-title-1" class="display4">#</span>
             <span id="experience-description-1"></span>
           </div>
           <div class="col justify-content-start align-items-center">
@@ -244,13 +248,13 @@
             <img id="experience-img-2" src="#" alt="levy picture">
           </div>
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-2" class="display4">#</h1>
+            <span id="experience-title-2" class="display4">#</span>
             <span id="experience-description-2"> </span>
           </div>
         </div>
         <div class="row mt-5">
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-3" class="display4">#</h1>
+            <span id="experience-title-3" class="display4">#</span>
             <span id="experience-description-3"> </span>
           </div>
           <div class="col justify-content-start align-items-center">
@@ -262,7 +266,7 @@
             <img id="experience-img-4" src="#" alt="borgov picture">
           </div>
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-4" class="display4">#</h1>
+            <span id="experience-title-4" class="display4">#</span>
             <span id="experience-description-4"> </span>
           </div>
         </div>
@@ -270,9 +274,10 @@
     </section>
     <!-- Varia -->
     <section>
+      <h2 class="invisible">Varia</h2>
       <div id="varia-section">
         <div id="varia-section-title">
-          <h1 id="section-title-4" class="display-4 text-light">#</h1>
+          <span id="section-title-4" class="display-4 text-light">#</span>
         </div>
         <div class="row chess-game-row">
           <div class="col d-flex justify-content-around align-items-center flex-column">
@@ -312,11 +317,8 @@
         </div>
       </div>
     </section>
-
   </main>
   <footer>
-
   </footer>
 </body>
-
 </html>

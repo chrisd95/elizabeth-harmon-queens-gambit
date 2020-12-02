@@ -27,6 +27,11 @@
             ouverture + ": " + variation;
           document.getElementById("ouverture-gif-" + position).src = gif;
         }
+        for (i = 0; i < data.titres_section_court.length; i++) {
+          let section_titre_court = data.titres_section_court[i];
+          let position = String(i + 1);
+          document.getElementById("section-title-short-" + position).innerHTML = section_titre_court.toUpperCase();
+        }
       });
     });
   </script>
@@ -42,22 +47,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav d-flex justify-content-around">
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#info-section">&#x2655; INFO</a>
+          <a id="section-title-short-1" class="nav-link text-light font-weight-bold" href="index.html#info-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#education-section">&#x2654; ÉDUCATION</a>
+          <a id="section-title-short-2" class="nav-link text-light font-weight-bold" href="index.html#education-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#experience-section">&#x2656; EXPÉRIENCE</a>
+          <a id="section-title-short-3" class="nav-link text-light font-weight-bold" href="index.html#experience-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="index.html#varia-section">&#x2657; VARIA</a>
+          <a id="section-title-short-4" class="nav-link text-light font-weight-bold" href="index.html#varia-section"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="form.html">&#x2658; CONTACT</a>
+          <a id="section-title-short-5" class="nav-link text-light font-weight-bold" href="form.html"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light font-weight-bold" href="services.html">&#x2659; SERVICES</a>
+          <a id="section-title-short-6" class="nav-link text-light font-weight-bold" href="services.html"></a>
         </li>
       </ul>
     </div>
@@ -208,37 +213,37 @@
         </div>
         <div class="row chess-game-row">
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-1" class="chess-game" alt="game-1" />
+            <img id="ouverture-gif-1" class="chess-game" alt="game-1" src="#"/>
             <p id="ouverture-echecs-1" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-2" class="chess-game" alt="game-2" />
+            <img id="ouverture-gif-2" class="chess-game" alt="game-2" src="#" />
             <p id="ouverture-echecs-2" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-3" class="chess-game" alt="game-3" />
+            <img id="ouverture-gif-3" class="chess-game" alt="game-3" src="#"/>
             <p id="ouverture-echecs-3" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-4" class="chess-game" alt="game-4" />
+            <img id="ouverture-gif-4" class="chess-game" alt="game-4" src="#"/>
             <p id="ouverture-echecs-4" class="text-lead-chess-game"></p>
           </div>
         </div>
         <div class="row chess-game-row">
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-5" class="chess-game" alt="game-5" />
+            <img id="ouverture-gif-5" class="chess-game" alt="game-5" src="#"/>
             <p id="ouverture-echecs-5" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-6" class="chess-game" alt="game-6" />
+            <img id="ouverture-gif-6" class="chess-game" alt="game-6" src="#"/>
             <p id="ouverture-echecs-6" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-7" class="chess-game" alt="game-7" />
+            <img id="ouverture-gif-7" class="chess-game" alt="game-7" src="#"/>
             <p id="ouverture-echecs-7" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img id="ouverture-gif-8" class="chess-game" alt="game-8" />
+            <img id="ouverture-gif-8" class="chess-game" alt="game-8" src="#"/>
             <p id="ouverture-echecs-8" class="text-lead-chess-game"></p>
           </div>
         </div>

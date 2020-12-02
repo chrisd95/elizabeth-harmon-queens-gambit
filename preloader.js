@@ -16,9 +16,6 @@ function preloaderFunction() {
     // Model 2 - Smooth
     // document.getElementById("page-top").scrollIntoView({behavior: 'smooth'});
 
-
-
-
     // Removing Preloader:
 
     $('#ctn-preloader').addClass('loaded');
@@ -35,7 +32,7 @@ function preloaderFunction() {
 
       });
     }
-  }, 2000);
+  }, 1000);
 }
 
 

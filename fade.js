@@ -2,44 +2,19 @@ var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.5.1.min.js';
 script.type = 'text/javascript';
 
-// I used the following link to achieve the fade in and fade outs:
+// I used both links to learn how to use fades:
+// https://stackoverflow.com/questions/43531747/jquery-fadein-with-opacity0-or-visibilityhidden
 // https://webdesign.tutsplus.com/tutorials/simple-fade-effect-on-scroll--cms-35166
-
-const checkpoint = 400;
 
 window.addEventListener("scroll", () => {
   currentScroll = window.pageYOffset
-  if (currentScroll <= checkpoint) {
-    opacity = 1 - currentScroll / checkpoint;
+  if (currentScroll <= 400) {
+    opacity = 1 - currentScroll / 400;
   } else {
     opacity = 0;
   }
-  document.querySelector(".jumbotron h1.display-8").style.opacity = opacity;
-  document.querySelector(".jumbotron .lead").style.opacity = opacity;
-});
-
-
-
-// window.addEventListener("scroll", () => {
-//   const checkpointCarousel = 250;
-//   const checkpointInfo = 400;
-//   currentScroll = window.pageYOffset
-//   if (currentScroll <= checkpointInfo) {
-//     opacityInfo = 0;
-//     opacityCarousel = 0;
-//   } else {
-//     opacityInfo = (currentScroll- checkpointInfo)/500;
-//     opacityCarousel = (currentScroll- checkpointCarousel)/500;
-//   }
-//   document.querySelector("#info-fade").style.opacity = opacityInfo;
-//   document.querySelector("#carousel-fade").style.opacity = opacityCarousel;
-// });
-
-//Used from
-//https://stackoverflow.com/questions/43531747/jquery-fadein-with-opacity0-or-visibilityhidden
-
-window.addEventListener("scroll", () => {
-  currentScroll = window.pageYOffset
+  document.querySelector("#nom_complet").style.opacity = opacity;
+  document.querySelector("#emission").style.opacity = opacity;
   if (currentScroll >= 350) {
     $("#carousel-fade").fadeTo("slow",1);
     setInterval(function(){
@@ -105,6 +80,8 @@ window.addEventListener("scroll", () => {
   }
   
   if(currentScroll >= 2800){
+    $("#section-title-4").fadeTo("slow",1);
+
     setInterval(function(){
       $("#ouverture-echecs-gif-1").fadeTo("slow",1);
       $("#ouverture-echecs-1").fadeTo("slow",1);

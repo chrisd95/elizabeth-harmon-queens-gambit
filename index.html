@@ -17,8 +17,47 @@
 
 </head>
 
-<body>
+<!-- preloader is NOT MY CODE, full creds to ARiyou2000, I adapted it to have chess pieces-->
+<!--Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
+<!-- Prevent Scroll -->
+<!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
+<!-- Give your "body" the class of "no-scroll-y" to hide the scroll bar -->
+
+<body id="page-top" class="no-scroll-y">
+
+  <!-- Start: Preloader -->
+  <section id="preloader-section">
+    <div id="preloader">
+      <div id="ctn-preloader" class="ctn-preloader">
+        <div class="animation-preloader">
+
+          <!-- Spinner -->
+          <div class="spinner"></div>
+
+          <!-- Start: Text Loading -->
+          <div class="txt-loading">
+            <span data-text-preloader="&#x2655;" class="letters-loading">&#x2655;</span>
+            <span data-text-preloader="&#x2656;" class="letters-loading">&#x2656;</span>
+            <span data-text-preloader="&#x2657;" class="letters-loading">&#x2657;</span>
+            <span data-text-preloader="&#x2658;" class="letters-loading">&#x2658;</span>
+            <span data-text-preloader="&#x2659;" class="letters-loading">&#x2659;</span>
+          </div>
+          <!-- End: Text Loading -->
+
+        </div>
+
+        <!-- Start: Preloader sides - Model 1 -->
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        <!-- End: Preloader sides - Model 1 -->
+
+      </div>
+    </div>
+  </section>
+  <!-- End: Preloader -->
+  <!-- Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,32 +68,32 @@
           <a id="section-title-short-1" class="nav-link text-light font-weight-bold" href="#info-section"></a>
         </li>
         <li class="nav-item">
-          <a id="section-title-short-2"  class="nav-link text-light font-weight-bold" href="#education-section"></a>
+          <a id="section-title-short-2" class="nav-link text-light font-weight-bold" href="#education-section"></a>
         </li>
         <li class="nav-item">
           <a id="section-title-short-3" class="nav-link text-light font-weight-bold" href="#experience-section"></a>
         </li>
         <li class="nav-item">
-          <a id="section-title-short-4"  class="nav-link text-light font-weight-bold" href="#varia-section"></a>
+          <a id="section-title-short-4" class="nav-link text-light font-weight-bold" href="#varia-section"></a>
         </li>
         <li class="nav-item">
-          <a id="section-title-short-5"  class="nav-link text-light font-weight-bold" href="form.html"></a>
+          <a id="section-title-short-5" class="nav-link text-light font-weight-bold" href="form.html"></a>
         </li>
         <li class="nav-item">
-          <a id="section-title-short-6"  class="nav-link text-light font-weight-bold" href="services.html"></a>
+          <a id="section-title-short-6" class="nav-link text-light font-weight-bold" href="services.html"></a>
         </li>
       </ul>
     </div>
   </nav>
   <main>
     <div class="jumbotron mb-0">
-      <h1 id="nom_complet" class="display-8 text-center font-weight-bold text-light"></h1>
+      <h1 id="nom_complet" class="display-8 text-center font-weight-bold text-light">#</h1>
       <p id="emission" class="lead text-center font-weight-bold text-light"></p>
     </div>
     <!-- Informations personnelles -->
     <section>
       <div id="info-section" class="row">
-        <div class="col d-flex justify-content-around align-items-center">
+        <div id="carousel-fade" class="col d-flex justify-content-around align-items-center">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -87,10 +126,10 @@
             </a>
           </div>
         </div>
-        <div class="col">
+        <div id="info-fade" class="col">
           <div class="card">
             <div class="card-body">
-              <h1 id="section-title-1" class="display-4 title"></h1>
+              <h1 id="section-title-1" class="display-4 title">#</h1>
             </div>
             <div class="card-body information">
               <span id="information-category-1" class="font-weight-bold"></span> <span id="information-value-1"></span> <br>
@@ -113,7 +152,7 @@
       <div id="education-section" class="row">
         <div class="container">
           <div class="main-timeline text-light">
-            <h1 id="section-title-2" class="display-4"></h1>
+            <h1 id="section-title-2" class="display-4">#</h1>
             <div class="timeline">
               <div class="icon"></div>
               <div class="date-content">
@@ -125,7 +164,7 @@
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 id="education-title-1" class="title"></h5>
+                <h5 id="education-title-1" class="title">#</h5>
                 <p id="education-description-1" class="description">
                 </p>
               </div>
@@ -142,7 +181,7 @@
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 id="education-title-2" class="title"></h5>
+                <h5 id="education-title-2" class="title">#</h5>
                 <p id="education-description-2" class="description">
                 </p>
               </div>
@@ -159,7 +198,7 @@
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 id="education-title-3" class="title"></h5>
+                <h5 id="education-title-3" class="title">#</h5>
                 <p id="education-description-3" class="description">
                 </p>
               </div>
@@ -176,7 +215,7 @@
                 </div>
               </div>
               <div class="timeline-content">
-                <h5 id="education-title-4" class="title"></h5>
+                <h5 id="education-title-4" class="title">#</h5>
                 <p id="education-description-4" class="description">
                 </p>
               </div>
@@ -189,129 +228,91 @@
     <!-- Expérience -->
     <section>
       <div id="experience-section">
-        <h1 id="section-title-3" class="experience-section-title mt-5 ml-5"></h1>
+        <h1 id="section-title-3" class="experience-section-title mt-5 ml-5">#</h1>
         <div class="row mt-5">
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-1" class="display4"></h1>
+            <h1 id="experience-title-1" class="display4">#</h1>
             <span id="experience-description-1"></span>
           </div>
           <div class="col justify-content-start align-items-center">
-            <img src="./img/elizabeth-harmon-shaibel.jpg" alt="">
+            <img id="experience-img-1" src="#" alt="shaibel picture">
           </div>
         </div>
 
         <div class="row mt-5">
           <div class="col d-flex justify-content-end align-items-center mr-5">
-            <img src="./img/elizabeth-harmon-levy.jpg" alt="">
+            <img id="experience-img-2" src="#" alt="levy picture">
           </div>
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-2" class="display4"></h1>
+            <h1 id="experience-title-2" class="display4">#</h1>
             <span id="experience-description-2"> </span>
           </div>
         </div>
         <div class="row mt-5">
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-3" class="display4"></h1>
+            <h1 id="experience-title-3" class="display4">#</h1>
             <span id="experience-description-3"> </span>
           </div>
           <div class="col justify-content-start align-items-center">
-            <img src="./img/elizabeth-harmon-benny.jpg" alt="">
+            <img id="experience-img-3" src="#" alt="benny picture">
           </div>
         </div>
         <div class="row mt-5">
           <div class="col d-flex justify-content-end align-items-center mr-5">
-            <img src="./img/elizabeth-harmon-borgov.jpg" alt="">
+            <img id="experience-img-4" src="#" alt="borgov picture">
           </div>
           <div class="col lead ml-5 mr-5 d-flex flex-column justify-content-center">
-            <h1 id="experience-title-4" class="display4"></h1>
+            <h1 id="experience-title-4" class="display4">#</h1>
             <span id="experience-description-4"> </span>
           </div>
         </div>
-            </div>
+      </div>
     </section>
     <!-- Varia -->
     <section>
       <div id="varia-section">
         <div id="varia-section-title">
-          <h1 id="section-title-4" class="display-4 text-light"></h1>
+          <h1 id="section-title-4" class="display-4 text-light">#</h1>
         </div>
         <div class="row chess-game-row">
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game1.gif" alt="game-1">
+            <img id="ouverture-echecs-gif-1" class="chess-game" src="#" alt="game-1">
             <p id="ouverture-echecs-1" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game2.gif" alt="game-2">
-            <p id="ouverture-echecs-2"  class="text-lead-chess-game"></p>
+            <img id="ouverture-echecs-gif-2" class="chess-game" src="#" alt="game-2">
+            <p id="ouverture-echecs-2" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game3.gif" alt="game-3">
-            <p id="ouverture-echecs-3"  class="text-lead-chess-game"></p>
+            <img id="ouverture-echecs-gif-3" class="chess-game" src="#" alt="game-3">
+            <p id="ouverture-echecs-3" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game4.gif" alt="game-4">
-            <p id="ouverture-echecs-4"  class="text-lead-chess-game"></p>
+            <img id="ouverture-echecs-gif-4" class="chess-game" src="#" alt="game-4">
+            <p id="ouverture-echecs-4" class="text-lead-chess-game"></p>
           </div>
         </div>
         <div class="row chess-game-row">
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game5.gif" alt="game-5">
-            <p  id="ouverture-echecs-5" class="text-lead-chess-game"></p>
+            <img id="ouverture-echecs-gif-5" class="chess-game" src="#" alt="game-5">
+            <p id="ouverture-echecs-5" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game6.gif" alt="game-6">
-            <p   id="ouverture-echecs-6" class="text-lead-chess-game"></p>
+            <img id="ouverture-echecs-gif-6" class="chess-game" src="#" alt="game-6">
+            <p id="ouverture-echecs-6" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game7.gif" alt="game-7">
-            <p  id="ouverture-echecs-7" class="text-lead-chess-game"></p>
+            <img id="ouverture-echecs-gif-7" class="chess-game" src="#" alt="game-7">
+            <p id="ouverture-echecs-7" class="text-lead-chess-game"></p>
           </div>
           <div class="col d-flex justify-content-around align-items-center flex-column">
-            <img class="chess-game" src="./img/botez-game8.gif" alt="game-8">
-            <p  id="ouverture-echecs-8" class="text-lead-chess-game"></p>
+            <img id="ouverture-echecs-gif-8" class="chess-game" src="#" alt="game-8">
+            <p id="ouverture-echecs-8" class="text-lead-chess-game"></p>
           </div>
         </div>
       </div>
     </section>
-    <!-- preloader is NOT MY CODE, full creds to ARiyou2000, I adapted it to have chess pieces-->
-    <!--Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
-    <!-- Prevent Scroll -->
-    <!-- Give your "body" the id of "page-top" to load page from start(top of the page) -->
-    <!-- Give your "body" the class of "no-scroll-y" to hide the scroll bar -->
 
-    <body id="page-top" class="no-scroll-y">
-
-      <!-- Start: Preloader -->
-      <section id="preloader-section">
-        <div id="preloader">
-          <div id="ctn-preloader" class="ctn-preloader">
-            <div class="animation-preloader">
-
-              <!-- Spinner -->
-              <div class="spinner"></div>
-
-              <!-- Start: Text Loading -->
-              <div class="txt-loading">
-                <span data-text-preloader="&#x2655;" class="letters-loading">&#x2655;</span>
-                <span data-text-preloader="&#x2656;" class="letters-loading">&#x2656;</span>
-                <span data-text-preloader="&#x2657;" class="letters-loading">&#x2657;</span>
-                <span data-text-preloader="&#x2658;" class="letters-loading">&#x2658;</span>
-                <span data-text-preloader="&#x2659;" class="letters-loading">&#x2659;</span>
-              </div>
-              <!-- End: Text Loading -->
-
-            </div>
-
-            <!-- Start: Preloader sides - Model 1 -->
-            <div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-            <!-- End: Preloader sides - Model 1 -->
-
-          </div>
-        </div>
-      </section>
-      <!-- End: Preloader -->
-      <!-- Created by ARiyou2000 link: https://codepen.io/ARiyou2000/pen/YzyxMOQ -->
   </main>
   <footer>
 

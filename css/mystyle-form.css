@@ -9,7 +9,7 @@ body {
   justify-content: center;
   background: none;
   transition: all 0.4s;
-  background: black;
+  background: rgba(0, 0, 0, 0.95);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -31,14 +31,15 @@ body {
 .form-section {
   background: white;
   height: 1100px;
-  background-image: url("../img/elizabeth-harmon-main.jpg");
+  background-image: url("https://i.imgur.com/RCM67TF.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .form-container {
   border-radius: 50px;
-  background: black;
+  background: rgba(0, 0, 0, 0.90);
   width: 45%;
   height: 55%;
 }

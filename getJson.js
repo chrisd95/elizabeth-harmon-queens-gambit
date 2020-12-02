@@ -1,8 +1,8 @@
 //https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
-$(function () {
+$(function() {
   var elizabeth = [];
 
-  $.getJSON("elizabeth-harmon.json", function (data) {
+  $.getJSON("elizabeth-harmon.json", function(data) {
     for (i = 0; i < data.titres_section_court.length; i++) {
       let section_titre_court = data.titres_section_court[i];
       let position = String(i + 1);
@@ -33,7 +33,8 @@ $(function () {
     }
 
     for (i = 0; i < data.age_pictures.length; i++) {
-      let age = data.age_pictures[i];
+      let age = data.age_pictures[i].age;
+      let ageImg = data.age_pictures[i].img;
       position = String(i + 1);
       document.getElementById("age-pictures-" + position).innerHTML = age;
     }
@@ -60,6 +61,7 @@ $(function () {
     for (i = 0; i < data.experience.length; i++) {
       let exp_titre = data.experience[i].titre;
       let exp_desc = data.experience[i].description;
+      let exp_img = data.experience[i].img;
       position = String(i + 1);
       document.getElementById(
         "experience-title-" + position
@@ -67,14 +69,19 @@ $(function () {
       document.getElementById(
         "experience-description-" + position
       ).innerHTML = exp_desc;
+      document.getElementById(
+        "experience-img-" + position
+      ).src = exp_img;
     }
 
     for (i = 0; i < data.ouvertures_echecs.length; i++) {
       let ouverture = data.ouvertures_echecs[i].ouverture;
       let variation = data.ouvertures_echecs[i].variation;
+      let gif = data.ouvertures_echecs[i].gif;
       position = String(i + 1);
       document.getElementById("ouverture-echecs-" + position).innerHTML =
         ouverture + ": " + variation;
+      document.getElementById("ouverture-echecs-gif-" + position).src = gif;
     }
   });
 });

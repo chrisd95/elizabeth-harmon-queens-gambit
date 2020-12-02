@@ -1,138 +1,162 @@
 {
-    "titre_html":{
-        "nom_complet":"Elizabeth Harmon",
-        "emission":"The Queen's Gambit"
+  "titre_html": {
+    "nom_complet": "Elizabeth Harmon",
+    "emission": "The Queen's Gambit",
+    "image": "https://i.ibb.co/KhfSXyX/elizabeth-harmon-toddler.jpg"
+  },
+  "information_personnelle": [{
+      "info_categorie": "Age",
+      "info_valeur": 20
     },
-    "information_personnelle":[
-        {
-            "info_categorie": "Age",
-            "info_valeur" : 20
-        },
-        {
-            "info_categorie": "Nationalité",
-            "info_valeur" : "Américaine"
-        },        {
-            "info_categorie": "Genre",
-            "info_valeur" : "Femme"
-        },        {
-            "info_categorie": "Couleur des yeux",
-            "info_valeur" : "Brun Noisette"
-        },        {
-            "info_categorie": "Taille",
-            "info_valeur" : "169 cm"
-        },        {
-            "info_categorie": "Poids",
-            "info_valeur" : "49 kg"
-        },        {
-            "info_categorie": "État-Civil",
-            "info_valeur" : "Non-mariée"
-        },        {
-            "info_categorie": "Occupation",
-            "info_valeur" : "Joueuse d'échecs professionnelle"
-        },        {
-            "info_categorie": "Premier Titre Gagné",
-            "info_valeur" : "Championne de l'État de Kentucky (1963-1967)"
-        },
-        {
-            "info_categorie":"Titre le plus récent",
-            "info_valeur" : "Championne des É-U (1967-)"
-        }
-    ],
-    "education":[
-        {
-            "saison": "Été",
-            "annee" : "1957",
-            "titre" : "Accident de la route",
-            "description" : "Après la mort de sa mère, Alice Harmon, meurt dans un accident de la route. Son père étant inconnu, Harmon est envoyée à la Maison Methuen, un orphelinat chrétien exclusif au filles, le 25 juillet, 1957."
-        },
-        {
-            "saison": "Été",
-            "annee" : "1963",
-            "titre" : "Adoption",
-            "description" : "Harmon est adoptée en 1963 par la famille Wheatley."
-        },
-        {
-            "saison" : "Hiver",
-            "annee" : "1966",
-            "titre" : "Co-Championne É-U",
-            "description": "En 1966, Elizabeth Harmon participe au tournois d'échecs US Championship. Dans ce tournois elle perds contre Benny et est considéré comme US Co-Championne."
-        },
-        {
-            "saison": "Automne",
-            "annee" : "1967",
-            "titre" : "Championne des É-U (Ohio)",
-            "description": "En 1967, Harmon identifie ses faiblesses durant le tournois d'Ohio US Champion. Elle défait Benny au finaux et ils décident de préparer pour son début de carrière internationale à New York."
-        }
-    ],
-    "experience":[
-        {
-            "titre":"Débuts précoces",
-            "description":"C'est dans le sous-sol de l'orphelinat qu'Elizabeth est introduit aux jeu d'échecs en témoignant le concierge de l'établissement, M. Shaibel, jouant seul, où elle devient fascinée avec ce jeu mystérieux."
-        },
-        {
-            "titre":"Succès subséquent",
-            "description": "Grâce à l'intervention de Jolene, Harmon défait les douze meilleurs jouers avec l'ouverte du pion du roi en environ 80 minutes, incluant le meilleur joueur Charles Levy; un exploit qu'elle se vante auprès de M.Shaibel pour des chocolats."
-        },
-        {
-            "titre":"Championnat des É-U",
-            "description": "En 1967, Harmon identifie ses faiblesses durant le tournois d'Ohio US Champion. Elle défait Benny au finaux et ils décident de préparer pour son début de carrière internationale à New York."
-        },
-        {
-            "titre": "Tournois sur invitation de Moscou",
-            "description":"Pour le jeu final du tournois, Elizabeth décide de jouer l'ouverture du Gambit dame, contrairement à son style de jeu. Elle gagne le jeu contre Borgov à l'âge de 20."
-        }
-    ],
-    "ouvertures_echecs":[
-        {
-            "ouverture": "Défense Budapest",
-            "variation": "Variation Adler"
-        },
-        {
-            "ouverture": "Défense Slav",
-            "variation": "Variation moderne"
-        },
-        {
-            "ouverture": "Défense Sicilienne",
-            "variation": "Variation Franco"
-        },
-        {
-            "ouverture": "Défense roi Indien",
-            "variation": "Variation Normale"
-        },
-        {
-            "ouverture": "Défense Sicilienne",
-            "variation": "Variation Mengarini"
-        },
-        {
-            "ouverture": "Ouverture anglaise",
-            "variation": "Défense Caro-Kann"
-        },
-        {
-            "ouverture": "Défense moderne",
-            "variation": "Système Geller"
-        },
-        {
-            "ouverture": "Défense scandinave",
-            "variation": "Variation Mieses"
-        }
-    ],
-    "titres_section":[
-        "Information Personnelles",
-        "Éducation",
-        "Expérience",
-        "Varia: Ouvertures Favories"
-    ],
-    "titres_section_court":[
-        "&#x2655; info",
-        "&#x2654; éducation",
-        "&#x2656; expérience",
-        "&#x2657; varia",
-        "&#x2658; contact",
-        "&#x2659; services"
-    ],
-    "age_pictures":[
-        "9 ans",
-        "13 ans",
-        "20 ans"
-    ]
+    {
+      "info_categorie": "Nationalité",
+      "info_valeur": "Américaine"
+    },
+    {
+      "info_categorie": "Genre",
+      "info_valeur": "Femme"
+    },
+    {
+      "info_categorie": "Couleur des yeux",
+      "info_valeur": "Brun Noisette"
+    },
+    {
+      "info_categorie": "Taille",
+      "info_valeur": "169 cm"
+    },
+    {
+      "info_categorie": "Poids",
+      "info_valeur": "49 kg"
+    },
+    {
+      "info_categorie": "État-Civil",
+      "info_valeur": "Non-mariée"
+    },
+    {
+      "info_categorie": "Occupation",
+      "info_valeur": "Joueuse d'échecs professionnelle"
+    },
+    {
+      "info_categorie": "Premier Titre Gagné",
+      "info_valeur": "Championne de l'État de Kentucky (1963-1967)"
+    },
+    {
+      "info_categorie": "Titre le plus récent",
+      "info_valeur": "Championne des É-U (1967-)"
+    }
+  ],
+  "education": [{
+      "saison": "Été",
+      "annee": "1957",
+      "titre": "Accident de la route",
+      "description": "Après la mort de sa mère, Alice Harmon, meurt dans un accident de la route. Son père étant inconnu, Harmon est envoyée à la Maison Methuen, un orphelinat chrétien exclusif au filles, le 25 juillet, 1957."
+    },
+    {
+      "saison": "Été",
+      "annee": "1963",
+      "titre": "Adoption",
+      "description": "Harmon est adoptée en 1963 par la famille Wheatley."
+    },
+    {
+      "saison": "Hiver",
+      "annee": "1966",
+      "titre": "Co-Championne É-U",
+      "description": "En 1966, Elizabeth Harmon participe au tournois d'échecs US Championship. Dans ce tournois elle perds contre Benny et est considéré comme US Co-Championne."
+    },
+    {
+      "saison": "Automne",
+      "annee": "1967",
+      "titre": "Championne des É-U (Ohio)",
+      "description": "En 1967, Harmon identifie ses faiblesses durant le tournois d'Ohio US Champion. Elle défait Benny au finaux et ils décident de préparer pour son début de carrière internationale à New York."
+    }
+  ],
+  "experience": [{
+      "titre": "Débuts précoces",
+      "description": "C'est dans le sous-sol de l'orphelinat qu'Elizabeth est introduit aux jeu d'échecs en témoignant le concierge de l'établissement, M. Shaibel, jouant seul, où elle devient fascinée avec ce jeu mystérieux.",
+      "img": "https://i.ibb.co/wzfVGRx/elizabeth-harmon-shaibel.jpg"
+    },
+    {
+      "titre": "Succès subséquent",
+      "description": "Grâce à l'intervention de Jolene, Harmon défait les douze meilleurs jouers avec l'ouverte du pion du roi en environ 80 minutes, incluant le meilleur joueur Charles Levy; un exploit qu'elle se vante auprès de M.Shaibel pour des chocolats.",
+      "img": "https://i.ibb.co/fNwhKRz/elizabeth-harmon-levy.jpg"
+    },
+    {
+      "titre": "Championnat des É-U",
+      "description": "En 1967, Harmon identifie ses faiblesses durant le tournois d'Ohio US Champion. Elle défait Benny au finaux et ils décident de préparer pour son début de carrière internationale à New York.",
+      "img": "https://i.ibb.co/B3XbG7m/elizabeth-harmon-benny.jpg"
+    },
+    {
+      "titre": "Tournois sur invitation de Moscou",
+      "description": "Pour le jeu final du tournois, Elizabeth décide de jouer l'ouverture du Gambit dame, contrairement à son style de jeu. Elle gagne le jeu contre Borgov à l'âge de 20.",
+      "img": "https://i.ibb.co/VxrctZq/elizabeth-harmon-borgov.jpg"
+    }
+  ],
+  "ouvertures_echecs": [{
+      "ouverture": "Défense Budapest",
+      "variation": "Variation Adler",
+      "gif": "https://s8.gifyu.com/images/botez-game1.gif"
+    },
+    {
+      "ouverture": "Défense Slav",
+      "variation": "Variation moderne",
+      "gif": "https://s8.gifyu.com/images/botez-game2.gif"
+    },
+    {
+      "ouverture": "Défense Sicilienne",
+      "variation": "Variation Franco",
+      "gif": "https://s8.gifyu.com/images/botez-game3.gif"
+    },
+    {
+      "ouverture": "Défense roi Indien",
+      "variation": "Variation Normale",
+      "gif": "https://s8.gifyu.com/images/botez-game4.gif"
+    },
+    {
+      "ouverture": "Défense Sicilienne",
+      "variation": "Variation Mengarini",
+      "gif": "https://s8.gifyu.com/images/botez-game5.gif"
+    },
+    {
+      "ouverture": "Ouverture anglaise",
+      "variation": "Défense Caro-Kann",
+      "gif": "https://s8.gifyu.com/images/botez-game6.gif"
+    },
+    {
+      "ouverture": "Défense moderne",
+      "variation": "Système Geller",
+      "gif": "https://s8.gifyu.com/images/botez-game7.gif"
+    },
+    {
+      "ouverture": "Défense scandinave",
+      "variation": "Variation Mieses",
+      "gif": "https://s8.gifyu.com/images/botez-game8.gif"
+    }
+  ],
+  "titres_section": [
+    "Information Personnelles",
+    "Éducation",
+    "Expérience",
+    "Varia: Ouvertures Favories"
+  ],
+  "titres_section_court": [
+    "&#x2655; info",
+    "&#x2654; éducation",
+    "&#x2656; expérience",
+    "&#x2657; varia",
+    "&#x2658; contact",
+    "&#x2659; services"
+  ],
+  "age_pictures": [{
+      "age": "9 ans",
+      "img": "https://i.ibb.co/8B3cg0K/elizabeth-harmon-main-three.jpg"
+    },
+    {
+      "age": "13 ans",
+      "img": "https://i.ibb.co/f9C4G40/elizabeth-harmon-teen.jpg"
+    },
+    {
+      "age": "20 ans",
+      "img": "https://i.ibb.co/n1PhCFp/elizabeth-harmon-adult.jpg"
+    }
+  ]
 }

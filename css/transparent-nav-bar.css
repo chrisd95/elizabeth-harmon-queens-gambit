@@ -1,0 +1,37 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: none;
+  transition: all 0.4s;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav {
+  width: 50%;
+  margin-left: 25.5vw;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    background: black;
+  }
+}
+
+/* (START) TRANSPARENT NAVBAR TUTORIAL CODE, NOT MINE:
+https://bootstrapious.com/p/transparent-navbar (START)*/
+.navbar.active {
+  background: black;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar.active .nav-link {
+  color: #555;
+}
+
+/* (END) TRANSPARENT NAVBAR TUTORIAL CODE, NOT MINE:
+https://bootstrapious.com/p/transparent-navbar (END)*/

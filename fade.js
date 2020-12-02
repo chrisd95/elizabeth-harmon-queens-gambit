@@ -1,3 +1,6 @@
+// Noms: Christopher Dip et Maya Bitar
+// Date: 2 Décembre 2020
+
 var script = document.createElement('script');
 script.src = 'https://code.jquery.com/jquery-3.5.1.min.js';
 script.type = 'text/javascript';
@@ -78,7 +81,7 @@ window.addEventListener("scroll", () => {
       $("#experience-description-4").fadeTo("slow",1);
     }, 2250);
   }
-  
+
   if(currentScroll >= 2800){
     $("#section-title-4").fadeTo("slow",1);
 

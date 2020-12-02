@@ -1,36 +1,15 @@
+/* Noms: Christopher Dip et Maya Bitar
+Date: 2 Décembre 2020 */
 body {
   margin: 0;
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
 }
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  background: none;
-  transition: all 0.4s;
-  background: rgba(0, 0, 0, 0.95);
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.navbar-nav {
-  width: 50%;
-  margin-left: 25.5vw;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
-@media only screen and (max-width: 800px) {
-  .navbar {
-    background: black;
-  }
-}
-
-#formcontainer{
+#formcontainer {
   opacity: 0;
 }
+
 .form-section {
   background: white;
   height: 1100px;

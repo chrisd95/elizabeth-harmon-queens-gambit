@@ -1,3 +1,6 @@
+// Noms: Christopher Dip et Maya Bitar
+// Date: 2 Décembre 2020
+
 //https://stackoverflow.com/questions/12070631/how-to-use-json-file-in-html-code
 $(function() {
   var elizabeth = [];

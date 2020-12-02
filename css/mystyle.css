@@ -176,6 +176,7 @@ body {
 
 #experience-section img {
   width: 40%;
+  min-width: 225px;
   border-radius: 20px;
 }
 

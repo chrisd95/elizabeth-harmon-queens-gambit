@@ -35,7 +35,7 @@ function preloaderFunction() {
 
       });
     }
-  }, 0);
+  }, 2000);
 }
 
 
